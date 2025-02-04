@@ -1,5 +1,5 @@
-
 package com_Testcases;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -7,6 +7,7 @@ import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -62,9 +63,7 @@ public class BaseClass {
 		File source = screenshot.getScreenshotAs(OutputType.FILE);
 
 		// project home directory (./)
-		//String destination=System.getProperty("user.dir")+"\\Screenshots\\"+name+"_"+timestamp+".png";
-		String destination = "./Screenshot/" + name + "_" + timestamp + ".png";
-
+		String destination = "./ScreenShots/" + tname + "_" + timestamp + ".png";
 		try {
 			FileUtils.copyFile(source, new File(destination));
 		} catch (Exception e) {
