@@ -63,7 +63,7 @@ public class BaseClass {
 		File source = screenshot.getScreenshotAs(OutputType.FILE);
 
 		// project home directory (./)
-		String destination = "./ScreenShots/" + tname + "_" + timestamp + ".png";
+		String destination = "./ScreenShots/" + name + "_" + timestamp + ".png";
 		try {
 			FileUtils.copyFile(source, new File(destination));
 		} catch (Exception e) {
@@ -75,7 +75,7 @@ public class BaseClass {
 	/*@AfterClass
 	public void closeApplication() {
 		
-		driver.close(); 
+		driver.close();  gchfcfxgfxgfxgjfxgfx
 	} 
 		*/
 }
