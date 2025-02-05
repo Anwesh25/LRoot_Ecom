@@ -68,7 +68,6 @@ public class BaseClass {
 		// project home directory (./)
 		//String destination=System.getProperty("user.dir")+"\\Screenshots\\"+name+"_"+timestamp+".png";
 		String destination = "./Screenshot/" + name + "_" + timestamp + ".png";
-
 		try {
 			FileUtils.copyFile(source, new File(destination));
 		} catch (Exception e) {
@@ -80,7 +79,7 @@ public class BaseClass {
 	/*@AfterClass
 	public void closeApplication() {
 		
-		driver.close(); 
+		driver.close();  gchfcfxgfxgfxgjfxgfx
 	} 
 		*/
 }
