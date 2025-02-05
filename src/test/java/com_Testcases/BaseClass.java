@@ -7,13 +7,16 @@ import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.*;
+
+
+
+
 
 public class BaseClass {
 	//we implement common functionalities like open application, close application, screenshots,log file
@@ -63,7 +66,8 @@ public class BaseClass {
 		File source = screenshot.getScreenshotAs(OutputType.FILE);
 
 		// project home directory (./)
-		String destination = "./ScreenShots/" + name + "_" + timestamp + ".png";
+		//String destination=System.getProperty("user.dir")+"\\Screenshots\\"+name+"_"+timestamp+".png";
+		String destination = "./Screenshot/" + name + "_" + timestamp + ".png";
 		try {
 			FileUtils.copyFile(source, new File(destination));
 		} catch (Exception e) {
